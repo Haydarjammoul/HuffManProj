@@ -9,8 +9,7 @@ using namespace std;
 int main()
 {
     std::cout << "Hello World!\n";
-    string tr = "abcddaef";
-    Text tut(tr);
+    Text tut;
     tut.Huffman_Tree_constructor();
 }
 
