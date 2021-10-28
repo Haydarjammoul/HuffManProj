@@ -12,7 +12,8 @@ class Text
         char h_key;
         int h_fr;
         Huf_map() {
-            h_fr =char(0);
+            h_key =char(0);
+            h_fr = 0;
         }
     };
     struct noeud {
@@ -48,10 +49,12 @@ class Text
     int write_to_bin_file();
     string& read_from_txt_file(string&);
     void Encode_write();
-
+    int ReadBinFile_and_ReconstructTree();
+    noeud* TraverseTree(noeud*, bool);
 public:
     void Huffman_Tree_constructor();
     Text();
+    void Decode();
    // ~Text() {  delete count; delete code; }
 };
 
