@@ -9,9 +9,10 @@ using namespace std;
 int main()
 {
     std::cout << "Hello World!\n";
-    string tr = "abcddaef";
-    Text tut(tr);
-    tut.Huffman_Tree_constructor();
+    Text tut;
+    //tut.Huffman_Tree_constructor();
+    //tut.ReadBinFile_and_ReconstructTree();
+    tut.Decode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

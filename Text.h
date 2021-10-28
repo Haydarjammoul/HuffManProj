@@ -1,13 +1,21 @@
 #pragma once
 #include <cstddef>
-#include <cstddef>
 #include <vector>
 #include <queue>
 #include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 class Text
 {
+    struct Huf_map {
+        char h_key;
+        int h_fr;
+        Huf_map() {
+            h_key =char(0);
+            h_fr = 0;
+        }
+    };
     struct noeud {
         unsigned int depth;
         char sdonnee; // caractere a coder
@@ -31,17 +39,22 @@ class Text
     string txt;
     //int* count;
     priority_queue <noeud *, vector<noeud*>, compare> d_queue;
-    noeud count[6];
+    noeud* count;
     noeud* head;
     vector<bool> code[6];
 
     //void adjust_depth(noeud*);
     //bool isLeaf(noeud*);
     void assign_code(noeud*, vector<bool>*);
-
+    int write_to_bin_file();
+    string& read_from_txt_file(string&);
+    void Encode_write();
+    int ReadBinFile_and_ReconstructTree();
+    noeud* TraverseTree(noeud*, bool);
 public:
     void Huffman_Tree_constructor();
-    Text(string);
+    Text();
+    void Decode();
    // ~Text() {  delete count; delete code; }
 };
 
