@@ -1,27 +1,17 @@
-// HuffManProj.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Haydar JAMMOUL & Antonin Grigoire
+// Huffman.cpp : This file contains the 'main' function that calls the method to encode the text in custData
+//and the method that decodes the text after recieving a bin file,that has the Frequencymap in Mapdb; and the encrypted file that has our compressed text
+//the decoded text is written in Decoded
 
 #include <iostream>
 #include <string>
 #include "Text.h"
 using namespace std;
-
 int main()
 {
     std::cout << "Hello World!\n";
     Text tut;
-    //tut.Huffman_Tree_constructor();
-    //tut.ReadBinFile_and_ReconstructTree();
+    tut.codageHuffman();
     tut.Decode();
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
